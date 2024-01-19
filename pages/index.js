@@ -90,7 +90,7 @@ export default function Home() {
     e.preventDefault();
     if (city.trim() !== "") {
       setLoading(true);
-      //fetchCityImage();
+      fetchCityImage();
       try {
         const response = await axios.get(
           `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}`
